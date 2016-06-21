@@ -8,6 +8,11 @@ import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.apache.zookeeper.ZooKeeper;
 
+/**
+ * 
+ * @author yangyang
+ * @version $Id: ZooKeeperClient.java, v 0.1 2016年6月21日 下午1:34:54 yangyang Exp $
+ */
 public class ZooKeeperClient {
 
     private static String connString = "localhost:2183";

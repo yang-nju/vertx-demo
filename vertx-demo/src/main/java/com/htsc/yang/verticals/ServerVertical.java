@@ -12,7 +12,7 @@ public class ServerVertical extends AbstractVerticle{
         Router router = Router.router(vertx);
         router.route().handler(BodyHandler.create());
         router.route("/spring/hello").handler(ctx -> 
-            vertx.eventBus().<String>send(SpringVertical.GET_HELLO_MSG_SERVICE_ADDRESS, 
+            vertx.eventBus().<String>send(SpringVertical_dubbo.DUBBO_MSG, 
                 "eventBus call spring service", result -> {
                     if(result.succeeded()){
                         ctx.response().putHeader("content-type", "application/json")

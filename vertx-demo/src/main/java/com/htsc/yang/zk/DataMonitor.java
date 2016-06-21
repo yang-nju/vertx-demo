@@ -11,6 +11,12 @@ import org.apache.zookeeper.Watcher.Event;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 
+/**
+ * 监视zookeeper目录树中的数据
+ * 
+ * @author yangyang
+ * @version $Id: DataMonitor.java, v 0.1 2016年6月21日 下午1:34:24 yangyang Exp $
+ */
 public class DataMonitor implements Watcher, StatCallback{
     
     ZooKeeper zk;
@@ -69,9 +75,6 @@ public class DataMonitor implements Watcher, StatCallback{
             chainedWatcher.process(event);
         }
     }
-    
-    
-    
     
     /**
      * Other classes use the DataMonitor by implementing this method
